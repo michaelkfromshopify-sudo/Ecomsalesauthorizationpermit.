@@ -206,9 +206,9 @@
                             <span>Compliance support</span>
                         </li>
                     </ul>
-                    <button onclick="openPlanForm('1-Year ESAP Plan ($100)')" class="w-full border border-[#008060] text-[#008060] px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition">
-                        Get Started
-                    </button>
+                                <button onclick="openPlanForm('1-Year ESAP Plan')" class="w-full shopify-gradient text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#008060]">
+                                    Get Started
+                                </button>
 </div>
                 <div class="bg-white p-8 rounded-xl shadow-lg glow-card border border-[#008060] relative">
                     <div class="absolute top-0 right-0 bg-[#008060] text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
@@ -238,7 +238,7 @@
                             <span>Priority compliance support</span>
                         </li>
                     </ul>
-                    <button onclick="openPlanForm('3-Year ESAP Plan ($250)')" class="w-full shopify-gradient text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition">
+                    <button onclick="openPlanForm('3-Year ESAP Plan')" class="w-full shopify-gradient text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#008060]">
                         Get 3-Year Plan
                     </button>
 </div>
@@ -271,9 +271,9 @@
                             <span>Continuous compliance monitoring</span>
                         </li>
                     </ul>
-                    <button onclick="openPlanForm('5-Year ESAP Plan ($350)')" class="w-full border border-[#008060] text-[#008060] px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition">
-                        Get 5-Year Plan
-                    </button>
+                                    <button onclick="openPlanForm('5-Year ESAP Plan')" class="w-full shopify-gradient text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#008060]">
+                                        Get 5-Year Plan
+                                    </button>
 </div>
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-200">
                     <h3 class="text-xl font-bold mb-2">10-Year ESAP Plan</h3>
@@ -308,9 +308,9 @@
                             <span>Annual compliance audits</span>
                         </li>
                     </ul>
-                    <button onclick="openPlanForm('10-Year ESAP Plan ($700)')" class="w-full border border-[#008060] text-[#008060] px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition">
-                        Get 10-Year Plan
-                    </button>
+                                    <button onclick="openPlanForm('10-Year ESAP Plan')" class="w-full shopify-gradient text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#008060]">
+                                        Get 10-Year Plan
+                                    </button>
 </div>
 </div>
         </div>
@@ -447,7 +447,7 @@
                                 </button>
                             </div>
                             <div class="mt-2">
-                                <form id="planForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                                <form id="planForm" class="space-y-4">
 <input type="hidden" id="selectedPlan" name="plan">
                                     <div>
                                         <label for="brandName" class="block text-sm font-medium text-gray-700">Brand Name</label>
@@ -465,20 +465,20 @@
                                         <label for="details" class="block text-sm font-medium text-gray-700">Additional Details</label>
                                         <textarea id="details" name="details" rows="3" class="mt-1 focus:ring-[#008060] focus:border-[#008060] block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
                                     </div>
-                                    <div id="formSuccess" class="hidden p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg">
-                                        Thank you! Your details have been submitted successfully.
-                                    </div>
-                                    <div id="formError" class="hidden p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg">
-                                        There was an error submitting your form. Please try again.
-                                    </div>
-                                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+        <div id="formSuccess" class="hidden p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg">
+            <i data-feather="check-circle" class="w-4 h-4 inline mr-1"></i> Thank you! Your details have been submitted successfully. We'll contact you shortly.
+        </div>
+        <div id="formError" class="hidden p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg">
+            <i data-feather="alert-circle" class="w-4 h-4 inline mr-1"></i> There was an error submitting your form. Please try again.
+        </div>
+<div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                         <button type="submit" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 shopify-gradient text-base font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#008060] sm:ml-3 sm:w-auto sm:text-sm">
-                                            Submit Application
+                                            Submit Application <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
                                         </button>
                                         <button type="button" onclick="closePlanForm()" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#008060] sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
-                                            Cancel
+                                            Cancel <i data-feather="x" class="w-4 h-4 ml-1"></i>
                                         </button>
-                                    </div>
+</div>
                                 </form>
                             </div>
                         </div>
@@ -490,7 +490,6 @@
 
     <script>
         feather.replace();
-        
         // Form handling
         const planForm = document.getElementById('planForm');
         const formSuccess = document.getElementById('formSuccess');
@@ -499,8 +498,15 @@
         planForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
+            // Show loading state
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Processing... <i data-feather="loader" class="animate-spin w-4 h-4 inline"></i>';
+            feather.replace();
+
             try {
-                const response = await fetch(e.target.action, {
+                const response = await fetch('https://formspree.io/f/xqayggnv', {
                     method: 'POST',
                     body: new FormData(e.target),
                     headers: {
@@ -511,17 +517,24 @@
                 if (response.ok) {
                     formSuccess.classList.remove('hidden');
                     formError.classList.add('hidden');
-                    setTimeout(closePlanForm, 2000);
+                    planForm.reset();
+                    setTimeout(closePlanForm, 3000);
                 } else {
-                    throw new Error('Form submission failed');
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Form submission failed');
                 }
             } catch (error) {
+                formError.innerHTML = `<i data-feather="alert-circle" class="w-4 h-4 inline mr-1"></i> Error: ${error.message}`;
                 formError.classList.remove('hidden');
                 formSuccess.classList.add('hidden');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                feather.replace();
             }
         });
-
-        function openPlanForm(planName) {
+function openPlanForm(planName) {
             document.getElementById('selectedPlan').value = planName;
             document.getElementById('planModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
